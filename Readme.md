@@ -1,1 +1,1 @@
-**Project page:** https://vlislab22.github.io/DOT/
+**Project page:** https://vlislab22.github.io/ECLIP/
