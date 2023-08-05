@@ -135,12 +135,13 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    The explicit neural radiance field (NeRF) has gained considerable interest for its efficient training and fast inference capabilities, making it a promising direction such as virtual reality and gaming. In particular, PlenOctree (POT) [1], an explicit hierarchical multi-scale octree representation, has emerged as a structural and influential framework. However, POT’s fixed structure for direct optimization is sub-optimal as the scene complexity evolves continuously with updates to cached color and density, necessitating refining the sampling distribution to capture signal complexity accordingly. To address this issue, we propose the dynamic PlenOctree (DOT), which adaptively refines the sample distribution to adjust to changing scene complexity. Specifically, DOT proposes a concise yet novel hierarchical feature fusion strategy during the iterative rendering process. Firstly, it identifies the regions of interest through training signals to ensure adaptive and efficient refinement. Next, rather than directly filtering out valueless nodes, DOT introduces the sampling and pruning operations for octrees to aggregate features, enabling rapid parameter learning. Compared with POT, our DOT outperforms it by enhancing visual quality, 
-                    reducing over <b>55.15/68.84%</b> parameters, 
-                    and providing <b>1.7/1.9</b> times FPS for NeRF-synthetic and Tanks & Temples, respectively.
-                    <br>
-                    <br>
-                    [1] Yu, Alex, et al. "Plenoctrees for real-time rendering of neural radiance fields." Proceedings of the IEEE/CVF International Conference on Computer Vision. 2021.
+		   	Contrasting Language-image pertaining (CLIP) has recently shown promising open-world and few-shot performance on 2D image-based recognition tasks. However, the transferred capability of CLIP to the novel event camera data still remains under-explored to date. In particular, due to the distinct modality gap with the image-text data and the lack of large-scale datasets, achieving this goal is non-trivial and thus requires significant research innovation.    
+			In this paper, we propose <b>E-CLIP</b>, a novel and effective framework that unleashes the potential of CLIP for event-based recognition to compensate for the lack of large-scale event-based datasets. Our work addresses two crucial challenges: 1) how to generalize CLIP's visual encoder to event data while fully leveraging events' unique properties, \eg, sparsity and high temporal 
+			resolution; 2) how to effectively align the multi-modal embeddings, i.e., image, text, and events. 
+			To this end, we first introduce a novel event encoder that subtly models the temporal information from events and meanwhile generates event prompts to promote the modality bridging.  We then design a text encoder that generates content prompts and utilizes hybrid text prompts to enhance the E-CLIP's generalization ability across diverse datasets.
+			With the proposed event encoder, text encoder, and original image encoder, a novel Hierarchical Triple Contrastive Alignment (HTCA) module is proposed to jointly optimize the correlation and enable efficient knowledge transfer among the three modalities.
+			We conduct extensive experiments on three event-based recognition benchmarks, and the results demonstrate that our E-CLIP outperforms existing methods by a large margin of <b>+3.94%</b> and <b>+4.62%</b> on the N-Caltech dataset, respectively, in both fine-tuning and few-shot settings. 
+			Moreover, our E-CLIP can be flexibly applied to the event retrieval task using both text or image queries, showing plausible performance.
                 </p>
             </div>
         </div>
