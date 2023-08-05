@@ -1,1 +1,1 @@
-# ECLIP
+Project page: https://vlislab22.github.io/ECLIP/
