@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>E-CLIP</title>
+    <title>EventBind</title>
     <meta name="author" content="Xu Zheng">
-    <meta name="description" content="Project page of E-CLIP">
+    <meta name="description" content="Project page of EventBind">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="eccv_logo.png">
     <!-- Format -->
@@ -26,8 +26,7 @@
     <div class="container" id="main">
         <div class="row">
             <h1 class="col-md-12 text-center">
-                E-CLIP: Towards Label-efficient Event-based
-Open-world Understanding by CLIP<br /> 
+                EventBind: Learning a Unified Representation to Bind Them All for Event-based Open-world Understanding<br /> 
 <!--                 <small>
                     
                 </small> -->
@@ -136,13 +135,12 @@ Open-world Understanding by CLIP<br />
                     Abstract
                 </h3>
                 <p class="text-justify">
-		   	Contrasting Language-image pertaining (CLIP) has recently shown promising open-world and few-shot performance on 2D image-based recognition tasks. However, the transferred capability of CLIP to the novel event camera data still remains under-explored to date. In particular, due to the distinct modality gap with the image-text data and the lack of large-scale datasets, achieving this goal is non-trivial and thus requires significant research innovation.    
-			In this paper, we propose <b>E-CLIP</b>, a novel and effective framework that unleashes the potential of CLIP for event-based recognition to compensate for the lack of large-scale event-based datasets. Our work addresses two crucial challenges: 1) how to generalize CLIP's visual encoder to event data while fully leveraging events' unique properties, \eg, sparsity and high temporal 
-			resolution; 2) how to effectively align the multi-modal embeddings, i.e., image, text, and events. 
-			To this end, we first introduce a novel event encoder that subtly models the temporal information from events and meanwhile generates event prompts to promote the modality bridging.  We then design a text encoder that generates content prompts and utilizes hybrid text prompts to enhance the E-CLIP's generalization ability across diverse datasets.
-			With the proposed event encoder, text encoder, and original image encoder, a novel Hierarchical Triple Contrastive Alignment (HTCA) module is proposed to jointly optimize the correlation and enable efficient knowledge transfer among the three modalities.
-			We conduct extensive experiments on three event-based recognition benchmarks, and the results demonstrate that our E-CLIP outperforms existing methods by a large margin of <b>+3.94%</b> and <b>+4.62%</b> on the N-Caltech dataset, respectively, in both fine-tuning and few-shot settings. 
-			Moreover, our E-CLIP can be flexibly applied to the event retrieval task using both text or image queries, showing plausible performance.
+		   	In this paper, we propose <strong>EventBind</strong>, a novel and effective framework that unleashes the potential of vision-language models (VLMs) for event-based recognition to compensate for the lack of large-scale event-based datasets. 
+In particular, due to the distinct modality gap with the image-text data and the lack of large-scale datasets, learning a common representation space for images, texts, and events is non-trivial.  
+Intuitively, we need to address two key challenges: 1) how to generalize CLIP's visual encoder to event data while fully leveraging events' unique properties, e.g., sparsity and high temporal 
+resolution; 2) how to effectively align the multi-modal embeddings, i.e., image, text, and events. 
+Accordingly, we first introduce a novel event encoder that subtly models the temporal information from events and meanwhile generates event prompts for modality bridging. We then design a text encoder that generates content prompts and utilizes hybrid text prompts to enhance EventBind's generalization ability across diverse datasets.
+With the proposed event encoder, text encoder, and image encoder, a novel Hierarchical Triple Contrastive Alignment <strong>HTCA</strong> module is introduced to jointly optimize the correlation and enable efficient knowledge transfer among the three modalities. We evaluate various settings, including fine-tuning and few-shot on three benchmarks and our EventBind achieves new state-of-art accuracy compared with the previous methods, such as on N-Caltech101(+5.34% and +1.70%) and N-Imagenet(+5.65% and +1.99%) with fine-tuning and 20-shot settings respectively. Moreover, our EventBind can be flexibly extended to the event retrieval task using text or image queries, showing plausible performance.
                 </p>
             </div>
         </div>
@@ -154,7 +152,7 @@ Open-world Understanding by CLIP<br />
      <div class="row">     
         <div class="col-md-8 col-md-offset-2">
             <h3>
-                Overall framework of our E-CLIP
+                Overall framework of our EventBind.
             </h3>
             <img src="./image/framework.png" class="img-responsive" alt="vis_res"  class="center" >
       	</div>
@@ -211,7 +209,7 @@ Open-world Understanding by CLIP<br />
                     <div class="col py-3">
                         <pre class="border">             
 @article{zhou2023clip,
-  title={E-CLIP: Towards Label-efficient Event-based Open-world Understanding by CLIP},
+  title={EventBind: Learning a Unified Representation to Bind Them All for Event-based Open-world Understanding},
   author={Zhou, Jiazhou and Zheng, Xu and Lyu, Yuanhuiyi and Wang, Lin},
   journal={arXiv preprint arXiv:2308.03135},
   year={2023}
